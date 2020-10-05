@@ -18,12 +18,6 @@ unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 export PATH="${HOME}/.rbenv/bin:${PATH}"
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
-# export PATH=/usr/local/share/python:$PATH
-
-# Rails and Ruby uses the local `bin` folder to store binstubs.
-# So instead of running `bin/rails` like the doc says, just run `rails`
-# Same for `./node_modules/.bin` and nodejs
-export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
@@ -32,19 +26,8 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export NVM_DIR=~/.nvm
-export BUNDLER_EDITOR="vim"
 source $(brew --prefix nvm)/nvm.sh
-export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
-# added by travis gem
-[ ! -s /Users/artemrakov/.travis/travis.sh ] || source /Users/artemrakov/.travis/travis.sh
 
-# The next line updates PATH for Yandex Cloud CLI.
-if [ -f '/Users/artemrakov/yandex-cloud/path.bash.inc' ]; then source '/Users/artemrakov/yandex-cloud/path.bash.inc'; fi
-
-# The next line enables shell command completion for yc.
-if [ -f '/Users/artemrakov/yandex-cloud/completion.zsh.inc' ]; then source '/Users/artemrakov/yandex-cloud/completion.zsh.inc'; fi
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
