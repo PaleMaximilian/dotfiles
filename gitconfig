@@ -11,8 +11,6 @@
 
 [core]
   pager = less -FRSX
-	editor = vim
-	excludesFile = /Users/artemrakov/.gitignore
 
 [alias]
   co = checkout
@@ -50,8 +48,8 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = scoff1k@gmail.com
-	name = Artem Rakov
+	email = maksymblyednov@gmail.com
+	name = Maksym Bliednov
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
