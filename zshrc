@@ -31,3 +31,4 @@ source $(brew --prefix nvm)/nvm.sh
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
 
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"

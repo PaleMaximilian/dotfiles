@@ -11,6 +11,7 @@
 
 [core]
   pager = less -FRSX
+	editor = subl -n -w  >/dev/null 2>&1
 
 [alias]
   co = checkout
@@ -48,8 +49,8 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = maksymblyednov@gmail.com
-	name = Maksym Bliednov
+	email = maksym.bliednov@patternjobs.com
+	name = Maksym
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
